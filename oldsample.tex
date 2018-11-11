@@ -1,0 +1,260 @@
+\documentclass{beamer}
+
+\usepackage{trclstools}
+\input{trulang-luatex.ppk}
+
+%\setmainfont{fonts/Exo2-Regular.otf}[
+%BoldFont = {fonts/Lato-Semibold.ttf}
+%]
+%\setmonofont{CMU Typewriter Text}
+
+\usetheme{Hannover}
+\usecolortheme{default}
+\setbeamercovered{transparent}
+%\usefonttheme[onlymath]{serif}
+%\setbeamerfont{title}{family=\fontspec{Lato}}
+
+
+\usepackage{trmath}
+\usepackage{trsym} 
+% \usepackage{tikz}
+\usepackage{siunitx}
+
+\makeatletter
+\define@key{beamerframe}{wide}[2ex]{%
+    \def\beamer@cramped{\itemsep #1\topsep0.5pt\relax}}
+\makeatother
+
+%\usepackage{unicode-math}
+%\setmathfont{STIXTwoMath.otf}
+% Use XITS Math for    [     ]     (     )     {     }
+% \setmathfont[range={"005B,"005D,"0028,"0029,"007B,"007D}]{XITS Math}
+%\setmathfont[range={"007B,"007D}]{XITS Math}
+
+\usepackage{wasysym}
+\def\solmass{\mathfrak{M}_{\astrosun}}
+\title{Формирование шаровых скоплений}
+\author{Тихоненко И, 491}
+%\institute{СПбГУ}
+\date{18.10.2018}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{План}
+  \tableofcontents
+\end{frame}
+
+\section{Когда?}
+
+\begin{frame}[wide]{Время образования}
+    Зависит от модели
+    
+    \begin{description}
+    \item[$z\approx 6$] Реионизация Вселенной
+    \item[$z\approx 2$] Пик звездообразования
+    \end{description}
+    
+    \begin{block}{В нашей Галактике}
+        \begin{description}
+        \item[MP] 12.5 Gyr
+        \item[MR] 11.5 Gyr
+        \end{description}
+    \end{block}
+\end{frame}
+
+\begin{frame}[wide]{Методы определения возраста}
+    \begin{block}{Варианты}
+    \begin{enumerate}
+        \item Поворот ГП (Vandenberg et al, 2013)
+        \item По охлаждению белых карликов (Hansen et al,2013; Garcia-Bero et al, 2014)
+        \item Сопоставить металличность 
+        соотношению масса-металличность для родных галактик на разных
+        красных смещениях $\to$ эпоха. (E.g Spitler, 2012)
+    \end{enumerate}
+    \end{block}
+\end{frame}
+
+\section{Где?}
+\begin{frame}[wide]{Механизмы\cite{royalproc}}
+    
+\begin{enumerate}
+    \item \emph{in-situ} \\
+        Маломассивные галактики\\
+        <<внутренние>>, 
+        высокометалличные (?)
+    \item \emph{ex-situ} (аккреция)\\
+        Массивные галактики \\
+        <<внешние>>, 
+        низкометалличные (?)
+\end{enumerate}
+Но отличить может быть сложно.
+
+Работает и то, и другое
+\end{frame}
+
+\begin{frame}{Пример аккреции}
+
+    \includegraphics[width=0.8\textwidth]{img/sgtstreams.jpg}
+
+    $\approx 5$ ШС\cite{royalproc}
+\end{frame}
+
+\begin{frame}{Начальная масса системы ШС}
+Сейчас $\mathfrak{M} \sim 1.2 \times 10^7 \solmass$, 
+
+\[
+\fder{N}{M} \propto (M + \Delta M) ^{-2} \, e^{-\frac{M +\Delta M}{M_c}}
+\quad \text{\emph{evolved} Shelter}
+\]
+$\Delta M \sim \num{2.5e5} \solmass$, 
+$M_c = \num{8e5}\solmass$
+
+\vspace{1em}
+
+\begin{block}{В итоге}
+    $\sim \num{2.5e7}\solmass{}$
+\end{block}
+
+\begin{block}{Причины}
+\begin{enumerate}
+    \item Испарение в приливном потенциале
+    \item Взаимодействие с ГМО
+    \item Маленькие просто плохо образуются
+\end{enumerate}
+\end{block}
+
+\end{frame}
+\section{Как?}
+
+\begin{frame}[wide]{Основные теории}
+    \begin{enumerate}
+        \item Особые условия в маломассивных тёмных гало в ранней Вселенной (реионизация)
+        \item Обычное звездообразование\par
+        \begin{enumerate}[a)]
+            \item В слияниях галактик
+            \item В диске
+        \end{enumerate}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Peebles, Dicke}
+
+Основная идея~"--- джинсовская фрагментация первичных газовых облаков
+
+\begin{block}{Причины}
+    \begin{enumerate}
+        \item Все ШС скопления похожи друг на друга
+        \item Высокая плотность газа --- низкие скорости вращения
+    \end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Peebles, Dicke}
+картиночка из статьи \cite{peebdicke}
+    \includegraphics[width=0.6\linewidth,angle=90]{img/peebdspeckles.png}
+\end{frame}
+
+\begin{frame}{Fall, Rees}
+
+\begin{block}{Проблемы}
+    \begin{itemize}
+        \item Скопления похожи на галактики рядом
+        \item Нет межгалактических ШС
+    \end{itemize}
+\end{block}
+
+\begin{block}{Выход}
+Термальные нестабильности в газовых гало протогалактик
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Modern stuff}
+
+\begin{itemize}
+    \item Trenti et all, 2015
+    \item Kimm et all, 2016
+\end{itemize}
+
+\vspace{1em}
+
+Merging of two or more cooling atomic (H) halos at high redshift
+($z > 6$).
+
+\begin{quote}
+    cosmological radiation-hydrodynamics simulations
+\end{quote}
+\end{frame}
+
+\begin{frame}{Cлияния галактик}
+    Li, Gnedin 2014
+    
+    \vspace{1em}
+    
+    \begin{enumerate}
+        \item Формируются в гало богатых газом галактик
+        \item Слияния гало формируют скопления
+        \item Бимодальность металличности --- ранние слияние маломассивных гало и поздние массивных
+    \end{enumerate}
+    
+\end{frame}
+
+\begin{frame}{Звездообразование в диске}
+    Kruijssen, 2015
+    
+    \vspace{1em}
+    
+    \begin{enumerate}
+        \item Формируются в богатых газом областях в галактиках с $z>2$
+        \item Должны как-то дожить до $z=0$ и не разрушится ударными
+        волнами в газе (из-за приливов).
+        \item Для этого приливными силами/слияниями транспортируются в гало
+        и спокойно живут там.
+    \end{enumerate}
+\end{frame}
+
+\section{Заключение}
+\begin{frame}
+\begin{center}
+\Huge
+    Всё сложно
+
+\vspace{1em}
+
+\Huge 
+    Ничего не понятно
+\end{center}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{Список литературы}
+
+\begin{thebibliography}{9}    
+  \beamertemplatearticlebibitems
+  \bibitem{royalproc}
+    D.~Forbes et al.
+    \newblock {\em Globular cluster formation and evolution in 
+    the context of cosmological galaxy assembly: open questions}.
+    \newblock arXiv:1801.05818v2 [astro-ph.GA] 31.01.2018
+   \bibitem{sluggs}
+    D.~Forbes et al.
+    \newblock {\em The {SLUGGS} survey: inferring the formation epochs of metal-poor and metal-rich globular clusters}
+    \newblock 2015MNRAS.452.1045F
+  \bibitem{peebdicke}
+    P.~Peebles and R.~Dicke
+    \newblock {\em Origin of globular star clusters}.
+    \newblock AJ, Vol 154, Dec 1968
+  \bibitem{fallress}
+    S.~Fall and M.~Rees
+    \newblock {\em The theory for the origin of globular clusters}.
+    \newblock 1985ApJ...298...18F
+ \end{thebibliography}
+
+\end{frame}
+
+
+\end{document}
