@@ -2,44 +2,55 @@
 % https://github.com/elauksap/focus-beamertheme
 
 \documentclass{beamer}
-\usetheme[numbering=progressbar]{focus}
 
+% решаем все проблемы с русским)
+\usepackage{trclstools}
+\usepackagepack{trulang}
 
-%\setmainfont{fonts/Exo2-Regular.otf}[
-%BoldFont = {fonts/Lato-Semibold.ttf}
-%]
-%\setmonofont{CMU Typewriter Text}
+\usetheme[numbering=progressbar,nofirafonts]{focus}
+% тема думает что она умнее нас..
+\usefonttheme{professionalfonts}
+\usepackage{FiraSans}
+\usepackage{FiraMono}
+% обманываем полиглоссию
+\newfontfamily{\cyrillicfonttt}{Fira Mono}
+% минутка математики
+% точнее как она будет выглядеть
+\usepackage[math-style=french]{unicode-math}
+\setmathfont{STIXTwoMath}
+% скобочки из шрифта выше вышлядят по-уродски, заменим их
+% Use XITS Math for    [     ]     (     )     {     }
+% \setmathfont[range={"005B,"005D,"0028,"0029,"007B,"007D}]{XITS Math}
+% но не все, а только фигурные
+\setmathfont[range={"007B,"007D}]{XITS Math}
 
-\usetheme{Hannover}
-\usecolortheme{default}
+% не помню нафиг это надо
 \setbeamercovered{transparent}
-%\usefonttheme[onlymath]{serif}
-%\setbeamerfont{title}{family=\fontspec{Lato}}
 
-
+% чтобы всем было удобно
 \usepackage{trmath}
-\usepackage{trsym} 
-% \usepackage{tikz}
+\usepackage{trsym}
+
+% рисовать
+\usepackage{tikz}
+
+% порядочное форматирование чисел
 \usepackage{siunitx}
+
 
 \makeatletter
 \define@key{beamerframe}{wide}[2ex]{%
-    \def\beamer@cramped{\itemsep #1\topsep0.5pt\relax}}
+   \def\beamer@cramped{\itemsep #1\topsep0.5pt\relax}}
 \makeatother
-
-%\usepackage{unicode-math}
-%\setmathfont{STIXTwoMath.otf}
-% Use XITS Math for    [     ]     (     )     {     }
-% \setmathfont[range={"005B,"005D,"0028,"0029,"007B,"007D}]{XITS Math}
-%\setmathfont[range={"007B,"007D}]{XITS Math}
 
 \usepackage{wasysym}
 \def\solmass{\mathfrak{M}_{\astrosun}}
+
 \title{Динамическая эволюция шаровых скоплений}
-\subtitle{Subtitle}
-\author{Author 1 \\ Author 2}
-\titlegraphic{\includegraphics[scale=1.25]{focuslogo.pdf}}
-\institute{Institute Name \\ Institute Address}
+\subtitle{\underdev}
+\author{taxus \\ \underdev}
+% \titlegraphic{\includegraphics[scale=1.25]{focuslogo.pdf}}
+\institute{СПбГУ}
 \date{\today}
 
 \begin{document}
@@ -73,6 +84,8 @@
         \begin{equation*}
             e^{i\pi} + 1 = 0.
         \end{equation*}
+
+        У нас стикс вместо неё. Там такая поддержка, что страшно..
     \end{frame}
 
     \section{Section 2}
