@@ -1,6 +1,0 @@
-[submodule "themes/focus-beamertheme"]
-	path = themes/focus-beamertheme
-	url = https://github.com/elauksap/focus-beamertheme
-[submodule "support/tarantas"]
-	path = support/tarantas
-	url = https://github.com/taxus-d/tarantas
