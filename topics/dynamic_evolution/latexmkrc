@@ -1,0 +1,6 @@
+$ENV{'TEXINPUTS'}='./support//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'TEXINPUTS'}='./../support//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'TEXINPUTS'}='./../../support//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'TEXINPUTS'}='./../../../support//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'OSFONTDIR'}="/usr/local/share/fonts;$HOME/.fonts;../../fonts
+$pdflatex = "pdflatex %O %S";
