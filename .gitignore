@@ -43,6 +43,9 @@
 *.dpth
 *.md5
 *.auxlock
+# beamer
+*.nav
+*.snm
 
 
 # OS generated files #
