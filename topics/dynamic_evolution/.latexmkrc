@@ -1,1 +1,0 @@
-/home/iliya/data/docs/Астрономия/Университет/Семинары/Скопления/clustsem/support/latexmkrc
