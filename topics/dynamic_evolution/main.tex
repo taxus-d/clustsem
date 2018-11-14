@@ -4,17 +4,18 @@
 \usepackage{trclstools}
 \usepackagepack{trulang}
 
+% \usepackage{FiraSans}
+\usepackage{FiraMono}
 \usetheme[numbering=progressbar,nofirafonts]{focus}
 % тема думает что она умнее нас..
 \usefonttheme{professionalfonts}
-\usepackage{FiraSans}
-\usepackage{FiraMono}
 % обманываем полиглоссию
 \newfontfamily{\cyrillicfonttt}{Fira Mono}
 % минутка математики
 % точнее как она будет выглядеть
-\usepackage[math-style=french]{unicode-math}
+\usepackage[math-style=french, mathrm=sym]{unicode-math}
 \setmathfont{STIXTwoMath}
+% \setmathfont{FiraMath}
 % скобочки из шрифта выше вышлядят по-уродски, заменим их
 % Use XITS Math for    [     ]     (     )     {     }
 % \setmathfont[range={"005B,"005D,"0028,"0029,"007B,"007D}]{XITS Math}
@@ -42,6 +43,7 @@
 
 \usepackage{wasysym}
 \def\solmass{\mathfrak{M}_{\astrosun}}
+\renewcommand{\arraystretch}{1.8}
 
 \title{Динамическая эволюция шаровых скоплений}
 \subtitle{\underdev}
@@ -55,10 +57,38 @@
         \maketitle
     \end{frame}
     
-    \section{Section 1}
-    \begin{frame}{Simple frame}
-        This is a simple frame.
+    \section{Введение}
+    \begin{frame}{Столкновительные системы}
+      \begin{block}{Времена}
+        \centering
+        \begin{tabular}{ccc}
+          релаксация                     & пересечение                 & существование \\
+          $t_r ≈ \frac{0.1N}{\ln N} t_c$ & $t_c ≈ \frac{R}{\averg{v}}$ & $T$
+        \end{tabular}
+      \end{block}
+        
+      \begin{block}{Cистемы}
+        \begin{tabular}{rllll}
+          галактики                 & $N ≈ 10^{11}$ & $10^{16}$ & $10^8$ & $10^{10}$\\
+          \alert<2>{шаровые скопления}         & $N ≈ 10^5$    & $10^8$    & $10^5$ & $10^{10}$\\
+          \alert<2>{рассеянные скопления}      & $N ≈ 10^2$    & $10^6$    & $10^6$ & $10^{8}$\\
+          \alert<2>{центры скоплений галактик} & $N ≈ 10^3$    & $10^{10}$ & $10^9$ & $10^{10}$\\
+        \end{tabular}
+      \end{block}
     \end{frame}
+    \begin{frame}[wide]{Процессы в столкновительных системах}
+      \begin{itemize}
+        \item Релаксация 
+        \item Перераспределение энергии 
+        \item Испарение
+        \item Неупругие столкновения
+        \item Формирование двойных систем
+        \item Взаимодействие с реликтовыми\footnote{primordial} двойными системами
+      \end{itemize}
+      \underdev времена всей этой ерунды
+    \end{frame}
+
+\end{document}
 
     \begin{frame}[plain]{Plain frame}
         This is a frame with plain style and it is numbered.
@@ -69,7 +99,7 @@
     \end{frame}
     
     \begin{frame}[noframenumbering]{No frame numbering}
-        This frame is not numbered and is citing reference \cite{knuth74}.
+        This frame is not numbered and is citing reference % \cite{knuth74}.
     \end{frame}
     
     \begin{frame}{Typesetting and Math}
@@ -166,9 +196,9 @@
     
     \appendix
     \begin{frame}{References}
-        \nocite{*}
-        \bibliography{demo_bibliography}
-        \bibliographystyle{plain}
+%         \nocite{*}
+%         \bibliography{demo_bibliography}
+%         \bibliographystyle{plain}
     \end{frame}
     
     \begin{frame}{Backup frame}
