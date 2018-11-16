@@ -4,6 +4,7 @@
 \usepackage{trclstools}
 \usepackagepack{trulang}
 
+
 % \usepackage{FiraSans}
 \usepackage{FiraMono}
 \usetheme[numbering=progressbar,nofirafonts]{focus}
@@ -36,6 +37,10 @@ mathrm=sym, mathbf=sym]{unicode-math}
 
 % порядочное форматирование чисел
 \usepackage{siunitx}
+
+\usepackage[sorting=none]{biblatex}
+\addbibresource{dynevol.bib}
+%\bibliographystyle{plain}
 
 
 \makeatletter
@@ -152,13 +157,13 @@ mathrm=sym, mathbf=sym]{unicode-math}
         \end{itemize}
       \end{block}
       \[
-        Γ = 4 \pi G^2 m_f^2 \ln Λ; \qquad Λ = \lfrac{b_\max}{b_0}
+        Γ = 4 \pi G^2 m_f^2 \ln Λ; \qquad Λ = \lfrac{b_{\max}}{b_0}
       \]
       тогда
       \begin{alignat*}{3}
         &D[(Δv_\perp)^2]& &\,=\,& &\tfrac{2n_f Γ}{v_t} \\
-        &D[Δv_\parallel]& &\,=\,& & -\left(1 + \tfrac{m_t}{m_f}\right)\tfrac{n_f Γ}{v_t^2} \\
-        &D[(Δv_\parallel)^2]& &\,=\,& &\tfrac{n_f Γ}{v_t\ln Λ} 
+        &D[Δv_\parallel]& &\,=\,& & -\left(1 + \tfrac{m_t}{m_f}\right)\tfrac{n_f Γ}{v_t^2}\\
+        &D[(Δv_\parallel)^2]& &\,=\,& &\tfrac{n_f Γ}{v_t{\ln{Λ}}}
       \end{alignat*}
     \end{frame}
     
@@ -323,14 +328,19 @@ mathrm=sym, mathbf=sym]{unicode-math}
     
     \begin{frame}[focus]
         Спасибо за внимание
+        \nocite{*}
     \end{frame}
     
-    \appendix
-    \begin{frame}{Литература}
-        \nocite{*}
-        \bibliography{dynevol}
-        \bibliographystyle{plain}
+    %\appendix
+%    \begin{frame}[t, allowframebreaks]
+%        \frametitle{Литература}
+%        \printbibliography
+%    \end{frame}
+    \begin{frame}[t,allowframebreaks]
+      \frametitle{References}
+      \printbibliography
     \end{frame}
+
 
 \end{document}
 

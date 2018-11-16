@@ -1,5 +1,6 @@
 $ENV{'TEXINPUTS'}='./support//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'TEXINPUTS'}='./themes//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'TEXINPUTS'}='./../themes//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'TEXINPUTS'}='../../support//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'TEXINPUTS'}='../../themes//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'OSFONTDIR'}="/usr/local/share/fonts:$HOME/.fonts:../../fonts//";
@@ -7,5 +8,5 @@ $ENV{'OSFONTDIR'}="/usr/local/share/fonts:$HOME/.fonts:../../fonts//";
 #  sub fontcache {
 #      system("mkluatexfontdb -fu");
 #  }
-$pdflatex = "lualatex %O %S";
+#$pdflatex = "lualatex %O %S";
 $pdf_mode = 1; $postscript_mode = $dvi_mode = 0;
