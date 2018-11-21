@@ -1,5 +1,6 @@
 $ENV{'TEXINPUTS'}='./support//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'TEXINPUTS'}='./themes//:' . $ENV{'TEXINPUTS'}; 
+$ENV{'TEXINPUTS'}='./../support//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'TEXINPUTS'}='./../themes//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'TEXINPUTS'}='../../support//:' . $ENV{'TEXINPUTS'}; 
 $ENV{'TEXINPUTS'}='../../themes//:' . $ENV{'TEXINPUTS'}; 
