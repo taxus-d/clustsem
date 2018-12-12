@@ -1,0 +1,27 @@
+\documentclass{beamer}
+\usetheme{}
+
+% решаем все проблемы с русским)
+\usepackage{trclstools}
+\usepackagepack{trulang}
+
+
+\usepackage{siunitx}
+
+\usepackage[sorting=none]{biblatex}
+\addbibresource{dynevol.bib}
+%\bibliographystyle{plain}
+
+
+\usepackage{wasysym}
+\def\solmass{\mathfrak{M}_{\astrosun}}
+\renewcommand{\arraystretch}{1.8}
+
+\def \bindvectors#1{\def\do##1{\declareMathLetterTransform ##1{\symbf}}\docsvlist{#1}}
+\def\uv#1{\symbf{\hat{#1}}}
+\def \bindunitvectors#1{\def\do##1{\declareMathLetterTransform ##1{\uv}}\docsvlist{#1}}
+\let \v = \symbf
+
+\def\lookatt#1{\textcolor{example}{#1}}
+
+\end{document}
